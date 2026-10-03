@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Apology Companion</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; max-width: 700px; margin: 40px auto; padding: 0 20px; line-height: 1.6; color: #1c1c1e; }
+  h1 { font-size: 1.8em; margin-bottom: 0.2em; }
+  h2 { font-size: 1.2em; margin-top: 1.6em; }
+  .updated { color: #6e6e73; font-size: 0.9em; }
+  ul { padding-left: 1.4em; }
+  code { background: #f2f2f7; padding: 1px 4px; border-radius: 4px; }
+  a { color: #007aff; }
+</style>
+</head>
+<body>
+<h1>Privacy Policy for Apology Companion</h1>
+<p class="updated"><strong>Last updated:</strong> 2026-10-03</p>
+<p><strong>Developer:</strong> Boyi Intelligence</p>
+<p>Apology Companion ("the app"), published by Boyi Intelligence ("we", "us"), is a voice-first AI companion for processing difficult interpersonal feelings. This policy describes what data the app handles, where it goes, and how long it is kept.</p>
+<h2>The short version</h2>
+<p><strong>We do not receive your data.</strong> The app sends nothing to the developer of this app. There is no analytics service, no crash reporting, no usage tracking, and no server of ours that your conversations pass through. We have no ability to read your conversations, hear your voice, see your photos, or identify you.</p>
+<p><strong>The only destination your data ever has is the AI provider you choose yourself</strong>, in Settings → AI service. When you send a message, its text goes directly from your device to that provider — OpenAI, DeepSeek, or NVIDIA — using an API key <strong>you</strong> supply. It does not pass through us on the way, and we hold no copy.</p>
+<p>Everything else — your voice, your recordings, your photos, your conversation history, your voice clips, your credentials — stays on your device.</p>
+<p><strong>Two optional features are exceptions, and both are off by default.</strong></p>
+<ul><li>If you switch on "Apology by video", the photo you attached to a role is sent to a video-generation service to create a short clip. See "Apology by video" below.</li><li>If you switch voice cloning to <strong>Service</strong> mode, the text of the companion's spoken replies is sent to the voice service you choose (ElevenLabs or PlayHT) to be turned into speech. Your own words are not sent there. See "Cloud voice services" below.</li></ul>
+<p>Nothing is sent to either service while the feature is off.</p>
+<h2>What stays on your device</h2>
+<ul><li><strong>Voice recordings.</strong> Speech-to-text runs entirely on-device. There is no cloud speech path in the app at all — when a language has no on-device model, the app refuses to transcribe rather than uploading your audio.</li><li><strong>Voice clips you add for voice cloning</strong> (see below), encrypted at rest.</li><li><strong>Your roles</strong> — the people you set up to talk to — including their names, your notes, and any photo you attach. Photos are encrypted at rest, and stay on the device unless you switch on "Apology by video" (below).</li><li><strong>Your conversation history</strong>, encrypted at rest with a per-install key held in the device keychain/keystore.</li><li><strong>Your account credentials.</strong> Accounts are local to the device; the password is stored only as a salted PBKDF2 hash.</li><li><strong>API keys you enter</strong> for an AI provider, stored in the device keychain/keystore.</li></ul>
+<h2>What leaves your device</h2>
+<p><strong>Conversation text is sent to the AI provider you selected.</strong> By default that is the only destination. If you turn on the optional cloud voice feature, the companion's replies are additionally sent to the voice service you chose; see "Cloud voice services" below.</p>
+<p>To generate a reply, the app sends the current message plus a short redacted context directly to the provider you picked in <strong>Settings → AI service</strong>, authenticated with <strong>your own API key</strong>. You choose the provider; if you have not configured one, the app sends nothing and tells you to add a key.</p>
+<p>This traffic goes straight from your device to that provider over HTTPS. It does not pass through any server we run, and we receive no copy. Turning the app's networking off entirely by not configuring a provider is a supported state — the rest of the app continues to work offline.</p>
+<p>Before sending, the app redacts both your message and the context around it: email addresses and phone numbers are stripped, and specific calendar dates ("15 March 2024") are replaced with a placeholder. Redaction is a safeguard, not a guarantee — names and street addresses are not removed, so anything else you write is sent as written.</p>
+<p>Once your text reaches the provider, <strong>their</strong> privacy policy and retention rules apply, under the account your API key belongs to. Please read the policy of whichever provider you choose.</p>
+<p><strong>Voice model downloads.</strong> The app can download on-device speech models, which are public files, from <code>huggingface.co</code> and <code>github.com</code>. No conversation content, account information or personal data is sent in these requests, but, as with any download, those hosts can see your device's IP address and standard request metadata. Their privacy policies apply.</p>
+<p>No audio recordings, no voice clips and no history files are ever transmitted. The only other things that can leave the device are a role's photo (only when you switch on "Apology by video") and the companion's reply text (only when you switch voice cloning to Service mode).</p>
+<h2>Voice cloning</h2>
+<p>If you turn on voice cloning, you can add an audio clip of a person, and the app will generate speech in that voice for that role's replies.</p>
+<ul><li>The clip is <strong>processed and stored only on your device</strong>, encrypted at rest. It is never uploaded.</li><li>Synthesis runs entirely on-device.</li><li>The app asks you to confirm that <strong>you have the voice owner's permission</strong> before the feature can be enabled. Please only use a voice you are entitled to use. Using someone's voice without their permission may be unlawful where you live, and in some jurisdictions synthesized speech must be labelled as artificial.</li><li>The cloned voice is used only for the role's own spoken replies. It is never used for the app's other voices, and the app does not use it anywhere outside your conversation.</li><li>Deleting the role, replacing the clip, or deleting your account removes the clip from the device.</li></ul>
+<h2>Cloud voice services</h2>
+<p><strong>Off by default.</strong> Voice cloning normally runs entirely on your device (see above). In Settings you can instead switch it to <strong>Service</strong> mode, where speech is generated by a third-party voice service using <strong>your own account and API key</strong> with that service. The app supports <strong>ElevenLabs</strong> and <strong>PlayHT</strong>.</p>
+<ul><li><strong>What is sent:</strong> the text of each reply the companion speaks, as it is spoken, plus the voice you selected on that service and a speaking-rate setting. <strong>What is not sent:</strong> your own words, your recordings, your voice clips, your photos, your history and your role's background.</li><li>The app asks for a <strong>separate confirmation</strong> before Service mode can be enabled, in addition to the voice-cloning confirmation, because it means conversation content leaves your device. Switching back to on-device mode stops any further text being sent.</li><li>The request goes directly from your device to the service over HTTPS. It does not pass through any server we run, and we receive no copy.</li><li>Once your text reaches the service, <strong>their</strong> privacy policy and retention rules apply, under the account your API key belongs to. Please read it before enabling this.</li><li>Your API key for the service is stored in the device keychain/keystore and is removed when you delete your account.</li></ul>
+<h2>Apology by video</h2>
+<p><strong>Off by default.</strong> When you switch it on in Settings, you supply your own credentials for <strong>Kling</strong> (a video-generation service operated by Kuaishou, a Chinese company), and the app generates one short clip per role.</p>
+<ul><li>The trigger is <strong>adding a role with a photo</strong>. At that moment the app sends <strong>that photo</strong> to Kling, along with a text instruction describing an apologetic expression. Kling returns a roughly 10-second video of the person in the photo appearing to offer an apology.</li><li><strong>This is the only feature that transmits a photo.</strong> No conversation text, no audio, no voice clips and no other role data are sent to Kling.</li><li>One clip is generated per role, when the role is created — not per message.</li><li>The request goes directly from your device to Kling using your own credentials. It does not pass through any server we run, and we receive no copy.</li><li>Once your photo reaches Kling, <strong>their</strong> privacy policy and retention rules apply. Please read it before enabling this.</li><li>The app stores only the <strong>link</strong> to the finished video, not the video itself. Those links expire, so a clip may stop playing after a while.</li><li>The generated person is synthetic. Only use a photo you have the right to use — animating someone's likeness without their permission may be unlawful where you live, and some jurisdictions require synthetic video to be labelled as such.</li><li>Switching the feature off stops any further photo being sent. Deleting the role removes the photo and the stored link from your device; anything already sent to Kling must be removed through Kling.</li></ul>
+<h2>Permissions the app asks for</h2>
+<ul><li><strong>Microphone</strong> — to hear you during a conversation. Audio is transcribed on-device and is never uploaded.</li><li><strong>Internet</strong> — to reach the AI provider you chose, the optional services described above, and to download voice models (see below).</li></ul>
+<h2>Deleting your data</h2>
+<ul><li><strong>Delete a role</strong> to remove that role, its photo, its voice clip and its conversation history.</li><li><strong>Settings → Delete account</strong> permanently erases your account and everything it owns: every role you created, all conversations, any voice clips, the stored links to any generated videos, every saved API key (AI providers, video generation and cloud voice services), the voice-cloning and cloud-voice confirmations you gave, and your credentials. This is immediate, happens entirely on the device, and cannot be undone.</li><li><strong>Uninstalling the app</strong> removes all app data.</li></ul>
+<p>Because your data is never sent to a server we control, there is nothing for us to delete on your behalf. Data held by your chosen AI provider — or by Kling, ElevenLabs or PlayHT, if you enabled the optional features that use them — must be deleted through that provider.</p>
+<h2>Not currently active</h2>
+<p>These are present in the codebase but <strong>disabled or unimplemented</strong>, and handle no data today. This section must be updated before any of them ship:</p>
+<ul><li><strong>Analytics / telemetry.</strong> No events are recorded or transmitted.</li><li><strong>Push notifications.</strong> No token is registered.</li><li><strong>In-app purchases.</strong> No purchase or receipt data is processed.</li><li><strong>"Share this session" reporting.</strong> Not implemented; nothing is uploaded. (Video generation and cloud voice services <em>are</em> implemented and are described in their own sections above.)</li></ul>
+<h2>Children's privacy</h2>
+<p>The app is not directed at children and is intended for users aged 17 or older. We do not knowingly collect data from children, and in any case we do not receive your data at all (see "The short version").</p>
+<h2>Changes to this policy</h2>
+<p>This document is updated when the app's data practices change, with a revised "Last updated" date.</p>
+<h2>Contact</h2>
+<p>Questions about this policy, or requests relating to your data, can be sent to Boyi Intelligence at: <strong><a href="mailto:byzh_service@sina.com">byzh_service@sina.com</a></strong></p>
+</body>
+</html>

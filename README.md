@@ -1,4 +1,4 @@
-# Apologize_Privacy
+# Apologize_privacy
 
 Privacy policy for **Apology Companion**, published by Boyi Intelligence.
 Contact: byzh_service@sina.com
@@ -9,4 +9,4 @@ Contact: byzh_service@sina.com
 When the policy changes, add a new `releases/vX.Y/` folder and copy it over `latest/`.
 
 Once GitHub Pages is enabled (Settings → Pages → deploy from `main`, root), the policy is at
-`https://cordialbear.github.io/Apologize_Privacy/latest/privacy-policy.html`.
+`https://cordialbear.github.io/Apologize_privacy/latest/privacy-policy.html`.

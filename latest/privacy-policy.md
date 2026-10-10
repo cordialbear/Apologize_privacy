@@ -1,10 +1,10 @@
-# Privacy Policy for Apology Companion
+# Privacy Policy for Apologize Companion
 
-**Last updated:** 2026-10-03
+**Last updated:** 2026-10-10
 
 **Developer:** Boyi Intelligence
 
-Apology Companion ("the app"), published by Boyi Intelligence ("we", "us"), is a voice-first AI companion for processing difficult
+Apologize Companion ("the app"), published by Boyi Intelligence ("we", "us"), is a voice-first AI companion for processing difficult
 interpersonal feelings. This policy describes what data the app handles, where it goes,
 and how long it is kept.
 
@@ -156,6 +156,8 @@ generates one short clip per role.
   above, and to download voice models (see below).
 
 ## Deleting your data
+
+**How to delete your data:** open the app, go to **Settings → Delete account** and confirm. This erases everything the app holds about you, immediately and on the device. You can also email **byzh_service@sina.com** with any question about your data. No account is held on a server, so no web form is needed.
 
 - **Delete a role** to remove that role, its photo, its voice clip and its conversation
   history.
